@@ -2,12 +2,30 @@
 <head>
     <title> Shopping Mall</title>
 </head>
+<style>
+    body {text-align: center;}
+    /* div {font-size: 20px;text-align: center;}
+    table {text-align: center;} */
+</style>
 <body>
     <h1>Wedding Shopping List</h1>
-    <p>Please choose your items: </p>
-    Item : Price <br>
-    {% for key, value in object.items() %}
-    {{ key }} : {{ value }} <br>
-    {% endfor %}
+    <h3>Please choose your items: </h3>
+    <form method="POST" formnovalidate>
+        <table align="center">
+            <tr>
+                <th> Item </th>
+                <th> Price (INR) </th>
+                <th> Quantity </th>
+            </tr>
+            {% for key, value in dict.items() %}
+            <tr>
+                <th> {{ key }} </th>
+                <th> {{ value }} </th>
+                <th><input type="text" id="{{key}}" name="{{key}}" ></th>
+            </tr>
+            {% endfor %}
+        </table>
+        <input type="submit">
+    </form>
 </body>
 </html>
