@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title> Shopping Mall</title>
+</head>
+<style>
+    body {text-align: center;}
+    /* div {font-size: 20px;text-align: center;}
+    table {text-align: center;} */
+</style>
+<body>
+    <h1>Wedding Shopping List</h1>
+    <h3>Please choose your items: </h3>
+    <form method="POST" formnovalidate>
+        <table align="center">
+            <tr>
+                <th> Item </th>
+                <th> Price (INR) </th>
+                <th> Quantity </th>
+                <th> Total </th>
+            </tr>
+            {% for key, value in quantity.items() %}
+            <tr>
+                {% if value != 0 %}
+                <th> {{ key }} </th>
+                <th>  {{ shop_list[key] }}</th>
+                <th> {{ value }} </th>
+                <th> {{ shop_list[key]|int * value|int  }} </th>
+                {% endif %}
+            </tr>
+            {% endfor %}
+            <tr>
+                <th>  </th>
+                <th> Grand Total </th>
+                <th>  </th>
+                <th>  </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

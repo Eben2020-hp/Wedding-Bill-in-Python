@@ -11,8 +11,10 @@ def home():
     if request.method == 'POST':
         # print(request.form['Saree'])
         for key, value in shop_list.items():
-            quantity[key] = request.form[key]
+            item_quantity = 0 if request.form[key] == '' else request.form[key]
+            quantity[key] = item_quantity
         print(quantity)
+        return render_template("receipt.html", shop_list=shop_list, quantity=quantity)
     else:
         return render_template("list.html", dict=shop_list)
 
