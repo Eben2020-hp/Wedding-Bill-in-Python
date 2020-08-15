@@ -16,7 +16,7 @@
                 <th> Item </th>
                 <th> Price (INR) </th>
                 <th> Quantity </th>
-                <th> Total </th>
+                <th> Total (INR) </th>
             </tr>
             {% for key, value in quantity.items() %}
             <tr>
@@ -30,9 +30,10 @@
             {% endfor %}
             <tr>
                 <th>  </th>
+                <th>  </th>
                 <th> Grand Total </th>
-                <th>  </th>
-                <th>  </th>
+                <th> INR {{grand_total}} </th>
+                <th>  AED {{grand_total_aed}} </th>
             </tr>
         </table>
     </form>
