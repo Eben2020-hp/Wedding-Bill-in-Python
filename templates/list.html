@@ -1,0 +1,13 @@
+<html>
+<head>
+    <title> Shopping Mall</title>
+</head>
+<body>
+    <h1>Wedding Shopping List</h1>
+    <p>Please choose your items: </p>
+    Item : Price <br>
+    {% for key, value in object.items() %}
+    {{ key }} : {{ value }} <br>
+    {% endfor %}
+</body>
+</html>
