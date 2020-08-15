@@ -10,7 +10,7 @@
 <body>
     <h1>Wedding Shopping List</h1>
     <h3>Please choose your items: </h3>
-    <form method="POST" formnovalidate>
+    <form method="POST">
         <table align="center">
             <tr>
                 <th> Item </th>
@@ -21,7 +21,7 @@
             <tr>
                 <th> {{ key }} </th>
                 <th> {{ value }} </th>
-                <th><input type="text" id="{{key}}" name="{{key}}" ></th>
+                <th><input type="number" min="0" id="{{key}}" name="{{key}}" ></th>
             </tr>
             {% endfor %}
         </table>
