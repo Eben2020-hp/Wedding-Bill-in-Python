@@ -12,9 +12,7 @@ na = b[0]
 qu = b[1] 
 pr = b[2] 
 
-# This loop terminates when user select 2.EXIT option when asked 
-# in try it will ask user for an option as an integer (1 or 2)  
-# if correct then proceed else continue asking options 
+# This loop terminates when user select 2.EXIT option when asked in try it will ask user for an option as an integer (1 or 2) if correct then proceed else continue asking options 
 while True: 
     try: 
         ch = int(input("1.ADD \n2.EXIT \n Enter your choice : ")) 
